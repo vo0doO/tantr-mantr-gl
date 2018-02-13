@@ -34,6 +34,7 @@ p#eight {
 }
 
 p#answer {
+  padding: 30px;
   color: lightblue;
 }
 
