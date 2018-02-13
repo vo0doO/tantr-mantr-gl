@@ -1,3 +1,30 @@
-h1 {
-  color: fuchsia;
+body {
+  text-align: center;
+  font-family: 'Helvetica Neue', arial;
+}
+
+div.eight-ball {
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+div.answer {
+  background-color: grey;
+  border: 1px solid grey;
+  border-radius: 50%;
+  width: 50%;
+  height: 50%;
+  margin: 25% auto;
+}
+
+p.eight {
+  font-size: 5em;
+  margin: 25% auto;
+}
+
+p.answer {
 }
