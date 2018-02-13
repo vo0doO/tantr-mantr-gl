@@ -9,6 +9,10 @@ h1 {
   font-size: 3em;
 }
 
+p {
+  margin: 0;
+}
+
 div.eight-ball {
   background-color: black;
   border: 1px solid black;
@@ -39,7 +43,7 @@ p#answer {
   letter-spacing: 2px;
 }
 
-button {
+button, input {
   margin: 20px;
   padding: 10px;
   border: 1px solid black;

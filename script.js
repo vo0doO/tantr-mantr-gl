@@ -2,7 +2,8 @@ console.log('hi');
 
 var eight = document.getElementById("eight");
 var answer = document.getElementById("answer");
-var button = document.getElementById("shake");
+var button = document.getElementById("button");
+var input = document.getElementById("input");
 
 var options = [
   "It is certain",
@@ -28,10 +29,12 @@ var options = [
 ];
 
 button.addEventListener("click", function(){
-  eight.innerText = "";
-  
-  var random = Math.floor(Math.random() * options.length);
-  
-  answer.innerText = options[random];
+  if (input.value.length < 1) {
+    alert("Please enter a question!");
+  } else {
+    eight.innerText = "";
+    var num = input.value.length % options.length;
+    answer.innerText = options[num];
+  }
 });
 
