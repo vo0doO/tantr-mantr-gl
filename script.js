@@ -1,5 +1,3 @@
-console.log('hi');
-
 var eight = document.getElementById("eight");
 var answer = document.getElementById("answer");
 var button = document.getElementById("button");
