@@ -50,13 +50,12 @@ var strForAdd = function () {
           // возвращаем рандомную букву из очищеного оптионс
           return options[Math.random(0, options.length)]
         }
-  }
-  // если мантра пустая
-  else {
+    // если мантра пустая
+  } else {
     // возвращаем рандомную букву из стартового оптионс
     return index(0, options.length)
   }
-  
+}
 
 button.addEventListener("click", function(){
   // если не ввел цель использования мантры
@@ -65,4 +64,5 @@ button.addEventListener("click", function(){
   } else {
     eight.innerText = "";
     answer.innerText = strForAdd();
-};
+  }
+}
