@@ -30,13 +30,17 @@ var options = [
 ];
 
 
-var mant = new Array();
+var mant = "";
+
+
 button.addEventListener("click", function(){
   if (input.value.length < 1) {
     alert("Пожалуйста напишите как вы будите использовать созданную специально для Вас мантру !");
   } else {
     eight.innerText = "";
-    answer.innerText = function ()
+    answer.innerText = function () {
+      if (mant.length > 0) {
+        let mantarr = mant.split("")
   }
 });
 
