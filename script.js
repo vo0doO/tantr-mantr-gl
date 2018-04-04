@@ -29,12 +29,14 @@ var options = [
   "."  
 ];
 
+
+
 button.addEventListener("click", function(){
-  if (input.value.length < 1) {
+  if (in o < 1) {
     alert("Пожалуйста введите вашу самую любимую букву!");
   } else {
     eight.innerText = "";
-    var mant = new Array(input.value);
+    
     
     answer.innerText = options[num];
   }
