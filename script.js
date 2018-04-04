@@ -59,10 +59,10 @@ var strForAdd = function () {
   
 
 button.addEventListener("click", function(){
+  // если не ввел цель использования мантры
   if (input.value.length < 1) {
     alert("Пожалуйста напишите как вы будите использовать созданную специально для Вас мантру !");
   } else {
     eight.innerText = "";
     answer.innerText = strForAdd();
-});
-
+};
