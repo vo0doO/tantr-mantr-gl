@@ -1,8 +1,8 @@
-var eight = document.getElementById("eight");
+var defaultText = document.getElementById("eight");
 var answer = document.getElementById("answer");
 var button = document.getElementById("button");
 var input = document.getElementById("input");
-
+var mant = " ";
 var options = [
   "а",
   "б",
@@ -30,13 +30,22 @@ var options = [
 ];
 
 
-var mant = "";
+button.addEventListener("click", function(){
+  // если не ввел цель использования мантры
+  if (input.value.length < 1) {
+    alert("Пожалуйста напишите как вы будите использовать созданную специально для Вас мантру !");
+  } else {
+    defaultText.innerText = "";
+    answer.innerText = strForAdd();
+  }
+}
 
-var index = function (min, max) {
+
+function index (min, max) {
   return Math.random(min, max);
 }
 
-var strForAdd = function () {
+function strForAdd () {
       // если мантра уже не пустая
       if (mant.length > 0) {
         // преобразуем её из строки в массив строк
@@ -54,15 +63,5 @@ var strForAdd = function () {
   } else {
     // возвращаем рандомную букву из стартового оптионс
     return index(0, options.length)
-  }
-}
-
-button.addEventListener("click", function(){
-  // если не ввел цель использования мантры
-  if (input.value.length < 1) {
-    alert("Пожалуйста напишите как вы будите использовать созданную специально для Вас мантру !");
-  } else {
-    eight.innerText = "";
-    answer.innerText = strForAdd();
   }
 }
