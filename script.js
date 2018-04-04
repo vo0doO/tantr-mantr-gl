@@ -29,21 +29,20 @@ var options = [
   "."  
 ];
 
-
-button.addEventListener("click", function(){
+button.addEventListener("click", function() {
   // если не ввел цель использования мантры
-  if (input.value.length < 1) {
+  if (input.value.length === 0) {
     alert("Пожалуйста напишите как вы будите использовать созданную специально для Вас мантру !");
   } else {
-    defaultText.innerText = "";
+    defaultText.innerText = strForAdd();
     answer.innerText = strForAdd();
   }
 }
 
+function getIndex(min, max) {
+  return Math.random() * (max - min) + min;
+  };
 
-function index (min, max) {
-  return Math.random(min, max);
-}
 
 function strForAdd () {
       // если мантра уже не пустая
@@ -57,7 +56,8 @@ function strForAdd () {
           // удаляем дубликаты из оптионс по индексам
           options.splice(dubleInd, dubleInd);
           // возвращаем рандомную букву из очищеного оптионс
-          return options[Math.random(0, options.length)]
+          let index = getIndex(
+          return options[]
         }
     // если мантра пустая
   } else {
