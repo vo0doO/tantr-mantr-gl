@@ -4,34 +4,38 @@ var button = document.getElementById("button");
 var input = document.getElementById("input");
 
 var options = [
-  "It is certain",
-  "It is decidedly so",
-  "Without a doubt",
-  "Yes – definitely",
-  "You may rely on it",
-  "As I see it, yes",
-  "Most likely",
-  "Outlook good",
-  "Yes",
-  "Signs point to yes",
-  "Don’t count on it",
-  "My reply is no",
-  "My sources say no",
-  "Outlook not so good",
-  "Very doubtful",
-  "Reply hazy, try again",
-  "Ask again later",
-  "Better not tell you now",
-  "Cannot predict now",
-  "Concentrate and ask again"
+  "а",
+  "б",
+  "в",
+  "г",
+  "д",
+  "е",
+  "ё",
+  ".",
+  "ж",
+  "з",
+  "и",
+  "й",
+  "к",
+  "л",
+  "м",
+  ".",
+  "н",
+  "о",
+  "п",
+  "р",
+  "с",
+  "т",
+  "."  
 ];
 
 button.addEventListener("click", function(){
   if (input.value.length < 1) {
-    alert("Please enter a question!");
+    alert("Пожалуйста введите вашу самую любимую букву!");
   } else {
     eight.innerText = "";
-    var num = input.value.length % options.length;
+    var mant = new Array(input.value);
+    
     answer.innerText = options[num];
   }
 });
