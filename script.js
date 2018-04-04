@@ -30,15 +30,13 @@ var options = [
 ];
 
 
-
+var mant = new Array();
 button.addEventListener("click", function(){
-  if (in o < 1) {
-    alert("Пожалуйста введите вашу самую любимую букву!");
+  if (input.value.length < 1) {
+    alert("Пожалуйста напишите как вы будите использовать созданную специально для Вас мантру !");
   } else {
     eight.innerText = "";
-    
-    
-    answer.innerText = options[num];
+    answer.innerText = function ()
   }
 });
 

@@ -1,3 +1,3 @@
-# Magic 8 Ball
+# Приложение создающее мантры для трансвеститов
 
-Solution code for the [JavaScript Magic 8 Ball with Basic DOM Manipulation tutorial](https://medium.com/@kellylougheed/javascript-magic-8-ball-with-basic-dom-manipulation-1636b83c3c26).
+Репозитарий git - системы управления версий проекта [JavaScript создающий мантры для трансвеститов](https://github.com/vo0doo/transfers-mantras.git)
