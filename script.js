@@ -39,7 +39,7 @@ button.addEventListener("click", function() {
   }
 }
 
-function getIndex(min, max) {
+function getIndex(min, max){
   return Math.random() * (max - min) + min;
   };
 
@@ -56,8 +56,7 @@ function strForAdd () {
           // удаляем дубликаты из оптионс по индексам
           options.splice(dubleInd, dubleInd);
           // возвращаем рандомную букву из очищеного оптионс
-          let index = getIndex(
-          return options[]
+          return options[Math.random(0, options.length)]
         }
     // если мантра пустая
   } else {
