@@ -40,6 +40,7 @@ button.addEventListener("click", function(){
     eight.innerText = "";
     answer.innerText = function () {
       if (mant.length > 0) {
+        index = Math.
         let mantarr = mant.split("")
   }
 });
