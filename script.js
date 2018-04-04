@@ -39,8 +39,11 @@ var index = function (min, max) {
 var strForAdd = function () {
       if (mant.length > 0) {
         let arr = mant.split("");
+        // индексируем буквы в мантре
         for (i=0; i <= arr.length; i++) {
-          let dubleInd = options.indexOf(arr[i])
+          // получаем индексы букв в оптионс уже имеющихся в мантре
+          let dubleInd = options.indexOf(arr[i]);
+          options.splice(dubleInd, dubleInd);
         }
   }
   else {
