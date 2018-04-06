@@ -56,7 +56,7 @@ function strForAdd () {
 }
 
 button.addEventListener("click", function() {
-    if (input.value.length > 0) {
+    if (input.value.length == 0) {
     alert("Пожалуйста напишите как вы будите использовать созданную специально для Вас мантру !");
   } else {
     defaultText.innerText = strForAdd();
