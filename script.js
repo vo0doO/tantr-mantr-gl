@@ -47,6 +47,11 @@ button.addEventListener("click", function() {
     if (~mant.indexOf(".")) {
       $("#def").toggle();
       $("#complet").toggle();
+      $(function () {
+        $("#pay").on("click", function () {
+          $("#")
+        })
+      })
         // alert("Поздравляем " + name + " ваша мантра готова: " + mant + " !")
     } else {
       let n = strForAdd();
