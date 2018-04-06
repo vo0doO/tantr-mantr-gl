@@ -35,8 +35,8 @@ function getIndex(min, max){
 
 
 function strForAdd () {
-  mant = mant+options[getIndex(0, options.length)]
-  return mant
+  var char = options[getIndex(0, options.length)]
+  return char
   }
 
 button.addEventListener("click", function() {
@@ -49,7 +49,7 @@ button.addEventListener("click", function() {
     } else {
       let n = strForAdd();
       defaultText.innerText = n;
-      answer.innerText = n;
+      mant = mant + n
     }
   };
 });
