@@ -4,26 +4,26 @@ var button = document.getElementById("button");
 var input = document.getElementById("input");
 var mant = "";
 var options = [
-  "а",
-  "б",
-  "в",
-  "г",
-  "д",
-  "е",
-  "ё",
-  ".",
-  "ж",
-  "з",
-  "и",
-  "й",
-  "к",
-  "л",
-  "м",
-  ".",
-  "н",
-  "о",
-  "п",
-  "р",
+  "А",
+  "Б",
+  "В",
+  "Г",
+  "Д",
+  "Е",
+  "Ё",
+  "Ж",
+  "З",
+  "И",
+  "Й",
+  "К",
+  "Л",
+  "М",
+  "Н",
+  "О",
+  "П",
+  "Р",
+  "С",
+  "Т",
   "с",
   "т",
   "."  
@@ -46,8 +46,8 @@ button.addEventListener("click", function() {
     let name = input.value
     if (~mant.indexOf(".")) {
       $("#def").toggle();
-      var finalText= "<p>Ваша мантра: "+ mant+"</p>"
-      $("#completText").append(finak);
+      var finalText= "<p>Ваша мантра: "+ "\"" + mant+"\""+"</p>" + "<p>Запишите её перед тем как продолжите...</p>"
+      $("#completText").append(finalText);
       $("#complet").toggle();
         // alert("Поздравляем " + name + " ваша мантра готова: " + mant + " !")
     } else {
