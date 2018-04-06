@@ -62,7 +62,7 @@ button.addEventListener("click", function() {
     let n = strForAdd();
     defaultText.innerText = n;
     answer.innerText = n;
-    mant
+    mant.splice()
   };
 });
 
