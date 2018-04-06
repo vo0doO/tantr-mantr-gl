@@ -1,34 +1,3 @@
-var defaultText = document.getElementById("eight");
-var answer = document.getElementById("answer");
-var button = document.getElementById("button");
-var input = document.getElementById("input");
-var mant = " ";
-var options = [
-  "а",
-  "б",
-  "в",
-  "г",
-  "д",
-  "е",
-  "ё",
-  ".",
-  "ж",
-  "з",
-  "и",
-  "й",
-  "к",
-  "л",
-  "м",
-  ".",
-  "н",
-  "о",
-  "п",
-  "р",
-  "с",
-  "т",
-  "."  
-];
-
 function getIndex(min, max){
   return Math.random() * (max - min) + min;
   };
@@ -40,7 +9,7 @@ function strForAdd () {
         // преобразуем её из строки в массив строк
         let arr = mant.split("");
         // индексируем буквы в мантре
-        for (let i=0; i <= arr.length; i++) {
+        for (i=0; i <= arr.length; i++) {
           // ищем дубликаты и получаем индексы этих букв в оптионс
           let dubleInd = options.indexOf(arr[i]);
           // удаляем дубликаты из оптионс по индексам
@@ -51,16 +20,6 @@ function strForAdd () {
     // если мантра пустая
   } else {
     // возвращаем рандомную букву из стартового оптионс
-    return getIndex(0, options.length)
+    return index(0, options.length)
   }
 }
-
-button.addEventListener("click", function() {
-    if (input.value.length > 0) {
-    alert("Пожалуйста напишите как вы будите использовать созданную специально для Вас мантру !");
-  } else {
-    defaultText.innerText = strForAdd();
-    answer.innerText = strForAdd();
-  };
-});
-
