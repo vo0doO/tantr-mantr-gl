@@ -44,11 +44,12 @@ button.addEventListener("click", function() {
     alert("Пожалуйста напишите как вы будите использовать созданную специально для Вас мантру !");
   } else {
     if (~mant.indexOf(".")) {
-        alert("Ваша мантра готова: " + mant)
+        alert("Ваша мантра готова: " + mant + " !")
+    } else {
+      let n = strForAdd();
+      defaultText.innerText = n;
+      answer.innerText = n;
     }
-    let n = strForAdd();
-    defaultText.innerText = n;
-    answer.innerText = n;
   };
 });
 
