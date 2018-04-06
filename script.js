@@ -2,7 +2,7 @@ var defaultText = document.getElementById("eight");
 var answer = document.getElementById("answer");
 var button = document.getElementById("button");
 var input = document.getElementById("input");
-var mant = " ";
+var mant = "";
 var options = [
   "а",
   "б",
