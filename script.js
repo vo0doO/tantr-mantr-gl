@@ -60,9 +60,11 @@ button.addEventListener("click", function() {
     alert("Пожалуйста напишите как вы будите использовать созданную специально для Вас мантру !");
   } else {
     let n = strForAdd();
+    
     defaultText.innerText = n;
     answer.innerText = n;
-    mant.splice()
+    mant.splice(-0, 0, n);
+    
   };
 });
 
