@@ -46,7 +46,8 @@ button.addEventListener("click", function() {
     let name = input.value
     if (~mant.indexOf(".")) {
       $("#def").toggle();
-      
+      var finalText= "<p>Ваша мантра: "+ mant+"</p>"
+      $("#completText").append(finak);
       $("#complet").toggle();
         // alert("Поздравляем " + name + " ваша мантра готова: " + mant + " !")
     } else {
