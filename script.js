@@ -41,10 +41,11 @@ function strForAdd () {
 
 button.addEventListener("click", function() {
     if (input.value.length == 0) {
-    alert("Пожалуйста напишите как вы будите использовать созданную специально для Вас мантру !");
+    alert("Пожалуйста введите Ваше имя !");
   } else {
+    let name = input.value
     if (~mant.indexOf(".")) {
-        alert("Ваша мантра готова: " + mant + " !")
+        alert("Поздравляем " + name + " ваша мантра готова: " + mant + " !")
     } else {
       let n = strForAdd();
       defaultText.innerText = n;
