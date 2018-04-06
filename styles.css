@@ -42,6 +42,7 @@ div#complet {
   font-weight: 100;
   letter-spacing: 2px;
   transition: .5s font-size;
+  display: none;
 }
 
 p#eight {
@@ -71,4 +72,8 @@ button, input {
 
 button:hover {
   font-size: 1.4em;
+}
+
+div#def {
+  display:
 }
