@@ -43,6 +43,9 @@ button.addEventListener("click", function() {
     if (input.value.length == 0) {
     alert("Пожалуйста напишите как вы будите использовать созданную специально для Вас мантру !");
   } else {
+    if (~mant.indexOf(".")) {
+        alert("Ваша мантра готова: " + mant)
+    }
     let n = strForAdd();
     defaultText.innerText = n;
     answer.innerText = n;
