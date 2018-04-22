@@ -1,8 +1,13 @@
-var app = require("express")
+const express = require("express");
+const app = express.app();
+
+app.use(express.static("/"));
 
 
-app.use(__dirname, function(req, res) {
-  res.sendFile("index.html")
+app.get("/", function(req, res) {
+  res.sendFile("index.html");
 })
 
-app.li
+const listener = app.listen(process.env.PORT, function () {
+  console.log("ТВОЕ ПРИЛОЖЕНИЕ РАЗВЕРНУТО НА ПОРТУ " + process.env.PORT)
+})
