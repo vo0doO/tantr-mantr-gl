@@ -3,7 +3,6 @@ var answer = document.getElementById("answer");
 var button = document.getElementById("button");
 var input = document.getElementById("input");
 
-$(".button2__text").text("ВКЛЮЧИТЬ МАНТРУ !")
 
 $("#sign-in-button").click(function () {
     $("#splash").toggle();
