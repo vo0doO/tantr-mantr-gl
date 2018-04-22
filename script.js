@@ -4,7 +4,10 @@ var button = document.getElementById("button");
 var input = document.getElementById("input");
 var sign = document.getElementByID("sign-in-button");
 
-$("#sign-in-button")click
+sign.addEventListener("click", function () {
+    $("#splash").toggle();
+})
+  
 
 var mant = "";
 var options = [
