@@ -1,5 +1,8 @@
 dependencies:
   express: 4.16.3
+  jquery: 3.3.1
+  npm: 5.8.0
+  start: 5.1.0
   webpack: 4.6.0
 packages:
   /accepts/1.3.5:
@@ -1186,6 +1189,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
+  /jquery/3.3.1:
+    dev: false
+    resolution:
+      integrity: sha512-Ubldcmxp5np52/ENotGxlLe6aGMvmF4R8S6tZjsP6Knsaxd/xp3Zrh50cG93lR6nPXyUFwzN3ZSOQI0wRJNdGg==
   /json-schema-traverse/0.3.1:
     dev: false
     resolution:
@@ -1486,6 +1493,120 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-GrKLVW4Zg2Oowab35vogE3/mrtk=
+  /npm/5.8.0:
+    bundledDependencies:
+      - abbrev
+      - ansi-regex
+      - ansicolors
+      - ansistyles
+      - aproba
+      - archy
+      - cacache
+      - call-limit
+      - bluebird
+      - bin-links
+      - chownr
+      - cli-table2
+      - cmd-shim
+      - columnify
+      - config-chain
+      - debuglog
+      - detect-indent
+      - detect-newline
+      - dezalgo
+      - editor
+      - find-npm-prefix
+      - fs-vacuum
+      - fs-write-stream-atomic
+      - gentle-fs
+      - glob
+      - graceful-fs
+      - has-unicode
+      - hosted-git-info
+      - iferr
+      - imurmurhash
+      - inflight
+      - inherits
+      - ini
+      - init-package-json
+      - is-cidr
+      - json-parse-better-errors
+      - JSONStream
+      - lazy-property
+      - libcipm
+      - libnpx
+      - lockfile
+      - lodash._baseindexof
+      - lodash._baseuniq
+      - lodash._bindcallback
+      - lodash._cacheindexof
+      - lodash._createcache
+      - lodash._getnative
+      - lodash.clonedeep
+      - lodash.restparam
+      - lodash.union
+      - lodash.uniq
+      - lodash.without
+      - lru-cache
+      - meant
+      - mkdirp
+      - mississippi
+      - move-concurrently
+      - nopt
+      - normalize-package-data
+      - npm-cache-filename
+      - npm-lifecycle
+      - npm-install-checks
+      - npm-package-arg
+      - npm-packlist
+      - npm-profile
+      - npm-registry-client
+      - npm-user-validate
+      - npmlog
+      - once
+      - opener
+      - osenv
+      - pacote
+      - path-is-inside
+      - promise-inflight
+      - query-string
+      - qrcode-terminal
+      - qw
+      - read
+      - read-cmd-shim
+      - read-installed
+      - read-package-json
+      - read-package-tree
+      - readable-stream
+      - readdir-scoped-modules
+      - request
+      - retry
+      - rimraf
+      - semver
+      - sha
+      - slide
+      - sorted-object
+      - sorted-union-stream
+      - ssri
+      - strip-ansi
+      - tar
+      - text-table
+      - uid-number
+      - umask
+      - unique-filename
+      - unpipe
+      - update-notifier
+      - uuid
+      - validate-npm-package-license
+      - validate-npm-package-name
+      - which
+      - wrappy
+      - write-file-atomic
+      - safe-buffer
+      - worker-farm
+    dev: false
+    resolution:
+      integrity: sha512-DowXzQwtSWDtbAjuWecuEiismR0VdNEYaL3VxNTYTdW6AGkYxfGk9LUZ/rt6etEyiH4IEk95HkJeGfXE5Rz9xQ==
   /object-copy/0.1.0:
     dependencies:
       copy-descriptor: 0.1.1
@@ -2017,6 +2138,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-XRSIPqLij52MtgoQavH/x/dU1qVKtWUAAZeOHsR9c2Ddi4XerFy3mc1alf+dLJKl9EUIm/Ht+EowFkTUOA6GAQ==
+  /start/5.1.0:
+    dev: false
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-HBcfDvlIf1bQq5p1Ws6GAWkgh2M=
   /static-extend/0.1.2:
     dependencies:
       define-property: 0.2.5
@@ -2335,4 +2462,7 @@ shrinkwrapMinorVersion: 4
 shrinkwrapVersion: 3
 specifiers:
   express: ^4.16.3
+  jquery: ^3.3.1
+  npm: ^5.8.0
+  start: ^5.1.0
   webpack: ^4.6.0
