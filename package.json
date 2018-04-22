@@ -1,6 +1,5 @@
 {
   "name": "t-m",
-  "script": "node server.js",
   "dependencies": {
     "webpack": "^4.6.0",
     "express": "^4.16.3"
