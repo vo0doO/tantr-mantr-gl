@@ -71,7 +71,7 @@ button.addEventListener("click", function() {
       } else if (~mant.indexOf(".")) {
           $("#def").toggle();
           var finalText= "<p>Ваша мантра: "+ "\"" + mant+"\""+"</p>" + "<p>Запишите её перед тем как продолжите...</p>"
-          $("#completText").append(finalText);
+          $("#pay").append(finalText);
           $("#complet").css({"display": "flex"});
             // alert("Поздравляем " + name + " ваша мантра готова: " + mant + " !")
         } else {
