@@ -2,12 +2,11 @@ var defaultText = document.getElementById("eight");
 var answer = document.getElementById("answer");
 var button = document.getElementById("button");
 var input = document.getElementById("input");
-var sign = document.getElementByID("sign-in-button");
 
-sign.addEventListener("click", function () {
+$("#sign-in-button").click(function () {
     $("#splash").toggle();
-})
-  
+    $("#def").css({"display": "flex"});
+  })
 
 var mant = "";
 var options = [
