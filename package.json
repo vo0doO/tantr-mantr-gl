@@ -6,7 +6,12 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "webpack": "^4.6.0",
+    "cheerio": "^1.0.0-rc.2",
+    "debug": "^3.1.0",
+    "midleware-io": "^0.0.6",
+    "node-fetch": "^2.1.2",
+    "sandwith-stream": "^1.0.0",
+    "toug
     "express": "^4.16.3",
     "npm": "^5.8.0",
     "start": "^5.1.0",
