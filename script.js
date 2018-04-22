@@ -2,6 +2,10 @@ var defaultText = document.getElementById("eight");
 var answer = document.getElementById("answer");
 var button = document.getElementById("button");
 var input = document.getElementById("input");
+var sign = document.getElementByID("sign-in-button");
+
+$("#sign-in-button")click
+
 var mant = "";
 var options = [
   "А",

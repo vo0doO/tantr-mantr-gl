@@ -1,5 +1,10 @@
 {
   "name": "t-m",
+  "version": "v.0.0.1",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "webpack": "^4.6.0",
     "express": "^4.16.3",
