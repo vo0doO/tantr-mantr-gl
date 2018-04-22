@@ -58,17 +58,19 @@ button.addEventListener("click", function() {
     alert("Пожалуйста введите Ваше имя !");
   } else {
     let name = input.value
-    if (mant.lenght > 3 & ~mant.indexOf(".")) {
-      $("#def").toggle();
-      var finalText= "<p>Ваша мантра: "+ "\"" + mant+"\""+"</p>" + "<p>Запишите её перед тем как продолжите...</p>"
-      $("#completText").append(finalText);
-      $("#complet").toggle();
-        // alert("Поздравляем " + name + " ваша мантра готова: " + mant + " !")
-    } else {
-      let n = strForAdd();
-      defaultText.innerText = n;
-      mant = mant + n
-    }
+    if (mant.lenght > 3) {
+      console.log("Длина набрана")
+      } else if (~mant.indexOf(".")) {
+          $("#def").toggle();
+          var finalText= "<p>Ваша мантра: "+ "\"" + mant+"\""+"</p>" + "<p>Запишите её перед тем как продолжите...</p>"
+          $("#completText").append(finalText);
+          $("#complet").toggle();
+            // alert("Поздравляем " + name + " ваша мантра готова: " + mant + " !")
+        } else {
+          let n = strForAdd();
+          defaultText.innerText = n;
+          mant = mant + n
+        }
   };
 });
 
