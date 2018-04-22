@@ -32,7 +32,7 @@ div.answer {
 }
 
 div#complet {
-    display: none;
+  display: none;
   position: fixed;
     top: 0;
     left: 0;
@@ -46,17 +46,6 @@ div#complet {
     align-items: center;
     color: white;
     flex-direction: column;
-  margin: 20px;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 1.2em;
-  font-family: 'Helvetica Neue', arial;
-  font-weight: 100;
-  letter-spacing: 2px;
-  transition: .5s font-size;
-  display: none;
 }
 
 
@@ -110,6 +99,22 @@ div#def {
 
 div#splash {
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0288D1;
+    background: radial-gradient(circle, #039BE5, #01579b);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+}
+
+div#pay {
+  position: fixed;
     top: 0;
     left: 0;
     width: 100%;

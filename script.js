@@ -3,6 +3,8 @@ var answer = document.getElementById("answer");
 var button = document.getElementById("button");
 var input = document.getElementById("input");
 
+$(".button2__text").text("ВКЛЮЧИТЬ МАНТРУ !")
+
 $("#sign-in-button").click(function () {
     $("#splash").toggle();
     $("#def").css({"display": "flex"});
@@ -70,7 +72,7 @@ button.addEventListener("click", function() {
           $("#def").toggle();
           var finalText= "<p>Ваша мантра: "+ "\"" + mant+"\""+"</p>" + "<p>Запишите её перед тем как продолжите...</p>"
           $("#completText").append(finalText);
-          $("#complet").toggle();
+          $("#complet").css({"display": "flex"});
             // alert("Поздравляем " + name + " ваша мантра готова: " + mant + " !")
         } else {
           let n = strForAdd();
