@@ -58,7 +58,7 @@ button.addEventListener("click", function() {
     alert("Пожалуйста введите Ваше имя !");
   } else {
     let name = input.value
-    if (~mant.indexOf(".")) {
+    if (mant.lenght >3 || ~mant.indexOf(".")) {
       $("#def").toggle();
       var finalText= "<p>Ваша мантра: "+ "\"" + mant+"\""+"</p>" + "<p>Запишите её перед тем как продолжите...</p>"
       $("#completText").append(finalText);
