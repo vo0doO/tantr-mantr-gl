@@ -3,8 +3,6 @@ var answer = document.getElementById("answer");
 var button = document.getElementById("button");
 var input = document.getElementById("input");
 
-import cheerio from 'cheerio';
-import createDebug from 'debug';
 
 $("#sign-in-button").click(function () {
     $("#splash").css({"display": "none",});
