@@ -2,13 +2,6 @@ var defaultText = document.getElementById("eight");
 var answer = document.getElementById("answer");
 var button = document.getElementById("button");
 var input = document.getElementById("input");
-
-
-$("#sign-in-button").click(function () {
-    $("#splash").css({"display": "none",});
-    $("#def").css({"display": "flex",});
-  })
-
 var mant = "";
 var options = [
   "А",
@@ -50,10 +43,15 @@ var options = [
   "Я",  
 ];
 
+
+$("#sign-in-button").click(function () {
+    $("#splash").css({"display": "none",});
+    $("#def").css({"display": "flex",});
+  })
+
 function getIndex(min, max){
   return Math.floor(Math.random() * (max - min) + min);
   };
-
 
 function strForAdd () {
   var char = options[getIndex(0, options.length)]
