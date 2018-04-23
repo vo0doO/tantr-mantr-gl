@@ -41,7 +41,6 @@ div#complet {
     background-color: #0288D1;
     background: radial-gradient(circle, #039BE5, #01579b);
     z-index: 10000;
-    
     justify-content: center;
     align-items: center;
     color: white;

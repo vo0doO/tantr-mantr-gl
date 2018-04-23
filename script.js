@@ -7,8 +7,8 @@ import cheerio from 'cheerio';
 import createDebug from 'debug';
 
 $("#sign-in-button").click(function () {
-    $("#splash").toggle();
-    $("#def").css({"display": "flex"});
+    $("#splash").css({"display": "none",});
+    $("#def").css({"display": "flex",});
   })
 
 var mant = "";
