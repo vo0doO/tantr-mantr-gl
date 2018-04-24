@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+    <head>
+        <title>Тестовое приложение</title>
+		<meta content="text/html; charset=utf-8" http-equiv="content-type">
+    </head>
+    <body id="wrp">
+		<div id="sandbox">
+		    <button id="install" type="button" onclick="install()">
+				Установить
+	        </button>
+	        <br/><br/><br/><br/>
+	        <button id="payment" type="button" onclick="payment()">
+				Оплатить
+	        </button>
+	        <button id="payment_sms" type="button" onclick="payment_sms()">
+				Оплатить sms
+	        </button>
+	        <button id="payment_other" type="button" onclick="payment_other()">
+				Оплатить не sms
+	        </button>
+			<br/><br/>
+	        <button id="inviteFrineds" type="button" onclick="invite()">
+	            Пригласить друзей
+	        </button>
+			<button id="addFriend" type="button" onclick="addFriend()">
+	            Подружиться
+	        </button>
+			<br/><br/>
+			<button id="reviewApp" type="button" onclick="review()">
+	            Написать отзыв
+	        </button>
+			<br/>
+			<br/>			
+			<button id="widget" type="button" onclick="permission('widget')">
+	            Разместить виджет в профиле
+	        </button>
+			<button id="stream" type="button" onclick="stream()">
+	            Добавить запись в «Что нового»
+	        </button>
+			<button id="guestbook" type="button" onclick="guestbook()">
+	            Добавить запись в Гостевую книгку
+	        </button>
+			<br/>
+			<br/>			
+			<button id="album" type="button" onclick="createAlbum()">
+	            Создать альбом
+	        </button>
+			<select id="albums-select"></select>
+			<button id="photo" type="button" onclick="upload()">
+	            Загрузить фото
+	        </button>
+	        <br/>
+	        <br/>
+	        <button id="setIframeHeight5000" type="button" onclick="setIframeHeight(5000)">
+	            Установить высоту 5000
+	        </button>
+	        <button id="setIframeHeight500" type="button" onclick="setIframeHeight(500)">
+	            Установить высоту 500
+	        </button>
+	        <br/>
+	        <br/>
+	        <button id="readHash" type="button" onclick="readHash()">
+	            Прочесть hash
+	        </button>
+	        <button id="writeHash" type="button" onclick="writeHash()">
+	            Записать в hash
+	        </button>
+	        <input id="writeHashInput" />
+	        <br/>
+	        <br/>
+	        <button id="scrollTop" type="button" onclick="scrollTo('top')">
+	            Скролл в начало приложения
+	        </button>
+	        <button id="scrollTop" type="button" onclick="scrollTo('bottom')">
+	            Скролл в конец приложения
+	        </button>
+	        <button id="scrollTop" type="button" onclick="scrollTo(330)">
+	            Скролл на 330 пикселей
+	        </button>
+	        <br/>
+	        <br/>
+	        <button id="getAppUsers" type="button" onclick="getAppUsers(330)">
+	            Установившие приложение
+	        </button>
+   	        <br/>
+	        <br/>
+					<button id="setTitle" type="button" onclick="setTitle()">
+	             Установить Title страницы
+	        </button>
+	        <input id="setTitleInput" />
+	        <br/>
+	        <br/>
+					
+	        <input type="text" id="exec-code" />
+	        <button id="exec" type="button" onclick="exec()">
+	            Выполнить
+	        </button>
+			<h2>
+				REST-методы
+			</h2>
+			<button id="guestbook-get" type="button" onclick="guestbookGet()">
+				guestbook.get
+	        </button>	
+	        <button id="email-unreadCount" type="button" onclick="emailUnreadCount()">
+				email.unreadCount
+	        </button>
+	        <button id="friends-getInvitationsCount" type="button" onclick="friendsGetInvitationsCount()">
+				friends.getInvitationsCount
+	        </button>
+		</div>
+		<textarea id="console" style="height: 500px; width: 100%; display: block;"></textarea>
+		<!--
+		<script src="http://cdn.connect.mail.ru/js/loader.js?new=1" type="text/javascript" charset="utf-8"></script>
+		-->
+		<script src="http://cdn.connect.mail.ru/js/loader.js"></script>
+        <script type="text/javascript" charset="utf-8">
+        	if(document.URL.indexOf('__branch') != -1 && /*@cc_on!@*/false){
+        	}
+        	
+            if(typeof window.console === 'undefined'){
+                window.console = {
+                    log: function(d){
+                        cl('console log: ' + d);
+                    }
+                };
+            }
+            function $(d){
+                return document.getElementById(d) || false;
+            }
+            function cl(d){
+                $('console').innerHTML += d + '\n';
+            }
+			function fillAlbumsSelect(){
+				mailru.app.photos.getAlbums(function(result){
+					albums = result;
+					var albumsSelect = $('albums-select');
+					albumsSelect.innerHTML = null;
+					for(var i = 0; i < albums.length; i++){
+						with(albumsSelect.appendChild(document.createElement('option'))){
+							value = albums[i].aid;
+							innerHTML = albums[i].aid;
+						}
+					};
+					
+					albumsSelect.style.display = 'inline';
+				}, user.uid);
+			}
+			
+            var user = {}, friends = {}, albums = null, aid = null, sandbox = document.getElementById('sandbox');
+	            mailru.loader.require('api', function() {
+					cl('Кросс-доменный транспорт ' + mailru.intercomType)
+				
+					//делаем инициализацию приложения
+	                mailru.app.init('cfe0b07b0762f250c1f640f8bbf259c3');
+					mailru.app.utils.hash.read();
+					
+					//проверяем, установлено ли приложение у пользователя
+	                if(mailru.session.is_app_user != 1){
+	                    sandbox.style.display = 'none';
+						mailru.events.listen(mailru.app.events.applicationInstallation, function(d){
+		                    cl(collectData(d))
+		                });
+	                    mailru.app.users.requireInstallation(['widget']);
+						return false;
+	                }	
+				
+					//получаем информацию о пользователе и сохраняем в глобаленой переменной user
+	                mailru.app.users.getInfo(function(result){
+						if(result.error) {
+							user = {};
+							return false;
+						}
+	                    user = result[0];
+						fillAlbumsSelect();
+	                });	                
+                
+					//блок подписки на события
+	                mailru.events.listen(mailru.app.events.friendsInvitation, function(d){
+	                    cl(collectData(d))
+	                });
+	                mailru.events.listen(mailru.app.events.paymentDialogStatus, function(d){
+	                    cl(collectData(d))
+	                });
+	                mailru.events.listen(mailru.app.events.incomingPayment, function(d){
+	                    cl(collectData(d))
+	                });
+	                mailru.events.listen(mailru.app.events.applicationReviewStatus, function(d){
+	                    cl(collectData(d))
+	                });
+	                mailru.events.listen(mailru.app.events.applicationSettingsStatus, function(d){
+	                    cl(collectData(d))
+	                });
+	                mailru.events.listen(mailru.app.events.permissionsChange, function(d){
+	                    cl(collectData(d))
+	                });
+	                mailru.events.listen(mailru.app.events.streamPublish, function(d){
+	                    cl(collectData(d))
+	                });
+	                mailru.events.listen(mailru.app.events.guestbookPublish, function(d){
+	                    cl(collectData(d))
+	                });
+	                mailru.events.listen(mailru.app.events.permissionDialogStatus, function(d){
+	                    cl(collectData(d))
+	                });
+	                mailru.events.listen(mailru.common.events.upload, function(d){
+	                    cl(collectData(d))
+	                });
+	                mailru.events.listen(mailru.app.events.createAlbum, function(d){
+	                    cl(collectData(d))
+	                });
+	                mailru.events.listen(mailru.app.events.hash.read, function(d){
+	                    cl(collectData(d))
+	                });
+	                mailru.events.listen(mailru.app.events.friends.add, function(d){
+	                    cl(collectData(d))
+	                });
+	            });
+            function collectData(d){
+                var o = '';
+                for (var p in d){
+                    if(d.hasOwnProperty(p))
+                        if(typeof d[p] === 'object'){
+                            o += collectData(d[p]);
+                        }
+                        else{
+                            o += p + '->' + d[p] + '\n';
+                        }
+                    };
+                return o;
+            }
+			
+			//блок функций вызова api-методов
+            function payment(){
+                mailru.app.payments.showDialog({service_id: 1, service_name: "ви'лы", sms_price: 1, other_price: 2000
+});
+                return false;
+            }
+            function payment_sms(){
+                mailru.app.payments.showDialog({service_id: 2, service_name: "ви'лы sms", sms_price: 5});
+                return false;
+            }
+            function payment_other(){
+                mailru.app.payments.showDialog({service_id: 3, service_name: "ви'лы не sms", other_price: 31337});
+                return false;
+            }
+            function invite(){
+                mailru.app.friends.invite({name: 'test.app invite', logo: ''});
+                return false;
+            }
+            function review(){
+                mailru.app.users.review();
+                return false;
+            }
+            function permission(type){
+                mailru.common.users.requirePermissions(type);
+                return false;
+            }
+            function guestbook(){
+                mailru.common.guestbook.post({
+                        uid: user.uid,
+                      title: 'Творческий уголок',
+                      text: 'Чего хочу? С какою целью \n Открою душу вам свою? \n Какому злобному веселью, \n Быть может, повод подаю!',
+                      img_url: 'http://bitman.me/mailru/demo/img/stream_pic.jpeg',
+                      action_links: [
+                          {'text': 'Запостил UID', 'href': 'uid=' + user.uid}
+                        ]
+				});
+                return false;
+            }
+            function stream(){
+                mailru.common.stream.post({
+                  'title': '"заголовок записи", \'будет написан жирным шрифтом\'',
+                  'text': 'основной текст вашей записи, никак не обрабатывается (ссылки не выделяются), и мы не фильтруем +',
+                  'img_url': 'http://mattkazz.netsons.org/images/api-google.gif', 
+                  action_links: [
+                    {'text': 'заголовок ссылки 1', 'href': 'http://example.com/test1'},
+                    {'text': 'заголовок ссылки 2', 'href': 'http://example.com/test2'} 
+                  ]
+                });
+                return false;
+            }
+            function createAlbum(){
+                mailru.common.photos.createAlbum({ name: 'Альбом' })
+                mailru.events.listen(mailru.common.events.createAlbum, function(result){
+                    aid = result.aid;
+					fillAlbumsSelect();
+                })
+                return false;
+            }
+            function upload(){
+                mailru.common.photos.upload({
+                	aid: $('albums-select').value
+                   ,url: 'http://upload.wikimedia.org/wikipedia/commons/8/8a/Hubble_sequence_photo.png'
+                   ,set_as_cover: true
+                   ,title: 'космос'
+                   ,desc: 'Картинка космоса'
+                   ,tags: 'Космос галактики фсякое'
+                });
+                return false;
+            }
+            
+            function setIframeHeight(height){
+                mailru.app.utils.setHeight(height);
+                return false;
+            }
+            
+            function readHash(){
+                mailru.app.utils.hash.read();
+                return false;
+            }
+            function writeHash(){
+                mailru.app.utils.hash.write(document.getElementById('writeHashInput').value);
+                return false;
+            }
+            
+            function scrollTo(pos){
+                if(typeof pos === 'string'){
+                    switch(pos){
+                        case 'top' : pos  = 0; break;
+                        case 'bottom' : pos  = document.clientHeight; break;                        
+                    }
+                }
+                mailru.app.utils.scrollTo(pos);
+            }
+            
+            function install(){
+                mailru.app.users.requireInstallation(['stream']);
+            }
+            
+            function getAppUsers(){
+            	mailru.app.friends.getAppUsers(function(d){
+            		cl(collectData(d))
+            	});
+            }
+            
+            function getUserByUID(){
+	            var uid = $('uid').value;
+	            if(uid.indexOf(',') != -1) uid = uid.split(',');
+            	mailru.app.users.getInfo(function(d){
+            		cl(collectData(d))
+            	}, uid);
+            }
+			function guestbookGet(){
+//	            var uid = $('uid').value;
+//	            if(uid.indexOf(',') != -1) uid = uid.split(',');
+            	mailru.app.guestbook.get(function(d){
+            		cl(collectData(d))
+            	}, mailru.session.vid);
+            }
+			
+			function exec(){
+				eval($('exec-code').value);
+			}
+			
+			function emailUnreadCount(){
+			  mailru.common.email.getUnreadCount(function(unread_messages) {
+				cl(collectData(unread_messages));
+			  });
+			}
+			function friendsGetInvitationsCount(){
+			  mailru.common.friends.getInvitationsCount(function(invitations) {
+				alert(invitations.count);
+			  });
+			}
+			
+			function addFriend(){
+				mailru.app.friends.add('15984764615407557866');
+			}
+			
+			function setTitle(){
+          mailru.app.utils.setTitle(document.getElementById('setTitleInput').value);
+          return false;
+      }
+        </script>  
+    </body>
+</html>

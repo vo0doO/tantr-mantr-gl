@@ -8,8 +8,8 @@ app.get("/", function(req, res) {
   res.sendFile("index.html");
 })
 
-app.get("/readme/", function(req, res) {
-  res.sendFile("./README.md")
+app.get("/mail", function(req, res) {
+  res.sendFile("/app/mail.html")
 })
 
 const listener = app.listen(process.env.PORT, function () {
