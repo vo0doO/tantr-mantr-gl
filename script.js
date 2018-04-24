@@ -45,7 +45,7 @@ var options = [
 ];
 
 
-$("#sign-in-button").click(function () {
+$("#user-in-mail").click(function () {
     $("#splash").css({"display": "none",});
     $("#def").css({"display": "flex",});
   })
