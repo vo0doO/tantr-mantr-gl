@@ -1,4 +1,3 @@
-var mailru = require("mailru-api")
 
 var defaultText = document.getElementById("eight");
 var answer = document.getElementById("answer");
@@ -47,11 +46,6 @@ var options = [
 
 
 $("#sign-in-button").click(function () {
-    mailru.events.listen(mailru.connect.events.login, function(session) {
-    // эта функция будет вызвана при логине
-    alert(session.ext_perm); // показывает привилегии залогиненного пользователя
-    });
-    mailru.connect.login(['widget', 'photos']);
     $("#splash").css({"display": "none",});
     $("#def").css({"display": "flex",});
   })
