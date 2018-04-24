@@ -326,7 +326,11 @@
             }
             
             function install(){
-                mailru.app.users.requireInstallation(['stream']);
+               mailru.events.listen(mailru.connect.events.login, function(session) {
+                    // эта функция будет вызвана при логине
+                    alert(session.ext_perm); // показывает привилегии залогиненного пользователя
+              });
+                    mailru.connect.login(['widget', 'photos']);
             }
             
             function getAppUsers(){
