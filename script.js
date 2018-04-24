@@ -58,13 +58,18 @@ function strForAdd () {
   return char
   }
 
+// добавляем слушатель кнопки создать
 button.addEventListener("click", function() {
+  // если в поле ввода ничено не введено
     if (input.value.length == 0) {
+      // выводиим сообщение
     alert("Пожалуйста введите Ваше имя !");
   } else {
+    // если введено записываем ввод в переменную
     let name = input.value
-    if (mant.lenght > 3) {
-      console.log("Длина набрана")
+    //  если длина мантры больше 3 символов
+    if (mant.lenght > 2) {
+      // и если в мантре появилась точка
       } else if (~mant.indexOf(".")) {
           $("#def").toggle();
           var finalText= "<p>Ваша мантра: "+ "\"" + mant+"\""+"</p>" + "<p>Запишите её перед тем как продолжите...</p>"
