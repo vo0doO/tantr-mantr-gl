@@ -5,7 +5,7 @@ dependencies:
   jquery: 3.3.1
   middleware-io: 0.0.6
   node-fetch: 2.1.2
-  npm: 5.8.0
+  npm: 6.0.0
   sandwich-stream: 1.0.0
   start: 5.1.0
   tough-cookie: 2.3.4
@@ -687,7 +687,7 @@ packages:
       node: 4.x || >=6.0.0
     resolution:
       integrity: sha1-q4hOjn5X44qUR1POxwb3iNF2i7U=
-  /npm/5.8.0:
+  /npm/6.0.0:
     bundledDependencies:
       - abbrev
       - ansi-regex
@@ -695,6 +695,7 @@ packages:
       - ansistyles
       - aproba
       - archy
+      - byte-size
       - cacache
       - call-limit
       - bluebird
@@ -709,6 +710,7 @@ packages:
       - detect-newline
       - dezalgo
       - editor
+      - figgy-pudding
       - find-npm-prefix
       - fs-vacuum
       - fs-write-stream-atomic
@@ -728,6 +730,7 @@ packages:
       - JSONStream
       - lazy-property
       - libcipm
+      - libnpmhook
       - libnpx
       - lockfile
       - lodash._baseindexof
@@ -748,13 +751,16 @@ packages:
       - move-concurrently
       - nopt
       - normalize-package-data
+      - npm-audit-report
       - npm-cache-filename
       - npm-lifecycle
       - npm-install-checks
       - npm-package-arg
       - npm-packlist
+      - npm-pick-manifest
       - npm-profile
       - npm-registry-client
+      - npm-registry-fetch
       - npm-user-validate
       - npmlog
       - once
@@ -798,9 +804,12 @@ packages:
       - write-file-atomic
       - safe-buffer
       - worker-farm
+      - tiny-relative-date
+      - cli-columns
+      - node-gyp
     dev: false
     resolution:
-      integrity: sha512-DowXzQwtSWDtbAjuWecuEiismR0VdNEYaL3VxNTYTdW6AGkYxfGk9LUZ/rt6etEyiH4IEk95HkJeGfXE5Rz9xQ==
+      integrity: sha512-EtM7gNAgMdQeUh8SW2bsaogywVS37lPhf2GYAf2vxR1pktxxT02CW8BHrx59MSbG3ZrRBbcOhpe03gts+eAbdA==
   /nth-check/1.0.1:
     dependencies:
       boolbase: 1.0.0
@@ -1151,7 +1160,7 @@ specifiers:
   jquery: ^3.3.1
   middleware-io: ^0.0.6
   node-fetch: ^2.1.2
-  npm: ^5.8.0
+  npm: ^6.0.0
   sandwich-stream: ^1.0.0
   start: ^5.1.0
   tough-cookie: ^2.3.4
