@@ -50,6 +50,10 @@ $("#sign-in-button").click(function () {
     $("#def").css({"display": "flex",});
   })
 
+$("#sign-in-mail").click(function () {
+  
+})
+
 function getIndex(min, max){
   return Math.floor(Math.random() * (max - min) + min);
   };
