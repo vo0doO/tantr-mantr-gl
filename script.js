@@ -49,7 +49,7 @@ $("#sign-in-button").click(function () {
     $("#splash").css({"display": "none",});
     $("#def").css({"display": "flex",});
   })
-
+/*
 $("#sign-in-mail").click(function () {
     mailru.events.listen(mailru.connect.events.login, function(session) {
     // эта функция будет вызвана при логине
@@ -63,7 +63,7 @@ $("#user-in-mail").click(function () {
 });
 
 })
-   
+*/   
 function getIndex(min, max){
   return Math.floor(Math.random() * (max - min) + min);
   };
