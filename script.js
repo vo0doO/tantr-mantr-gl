@@ -55,7 +55,7 @@ $("#sign-in-mail").click(function () {
     // эта функция будет вызвана при логине
     alert(session.ext_perm); // показывает привилегии залогиненного пользователя
     });
-    mailru.connect.login(['widget', 'photos']);
+    mailru.connect.login(['widget', 'photos', 'guestbook', 'email']);
 })
 $("#user-in-mail").click(function () {
     mailru.common.users.getInfo(function(user_list) {
