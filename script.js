@@ -50,13 +50,6 @@ $("#sign-in-button").click(function () {
     $("#def").css({"display": "flex",});
   })
 
-$("#sign-in-mail").click(function () {
-    mailru.events.listen(mailru.connect.events.login, function(session) {
-    // эта функция будет вызвана при логине
-    alert(session.ext_perm); // показывает привилегии залогиненного пользователя
-    });
-    mailru.connect.login(['widget', 'photos']);
-})
 
 function getIndex(min, max){
   return Math.floor(Math.random() * (max - min) + min);
