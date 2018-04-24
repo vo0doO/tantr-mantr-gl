@@ -57,7 +57,13 @@ $("#sign-in-mail").click(function () {
     });
     mailru.connect.login(['widget', 'photos']);
 })
+$("#user-in-mail").click(function () {
+    mailru.common.users.getInfo(function(user_list) {
+      alert(user_list[0].first_name); // выведет имя пользователя с uid 123
+});
 
+})
+   
 function getIndex(min, max){
   return Math.floor(Math.random() * (max - min) + min);
   };
