@@ -101,9 +101,8 @@ div#def {
 div#splash {
     background: url('https://cdn.glitch.com/us-east-1%3A5e7e49b6-c815-4877-8abb-29e7b6cdfc1c%2Ffirebase-logo.png') no-repeat;
     background-size: 100px;
-    padding-left: 50px;
     background-position-y: 30%;
-  background-position-x: 50%;
+    background-position-x: 50%;
     position: fixed;
     top: 0;
     left: 0;
