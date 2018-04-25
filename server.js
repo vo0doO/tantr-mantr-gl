@@ -15,6 +15,14 @@ app.get("/mail", function(req, res) {
 app.get("/reciever.html", function(req, res) {
   res.sendFile("/app/reciever.html")
 })
+app.get("/readme", function(req, res) {
+  res.sendFile("/app/README.md")
+})
+
+app.get("/edit", function(req, res) {
+  res.sendFile("/app/edit.html")
+})
+
 const listener = app.listen(process.env.PORT, function () {
   console.log("ТВОЕ ПРИЛОЖЕНИЕ РАЗВЕРНУТО НА ПОРТУ " + process.env.PORT)
 })
