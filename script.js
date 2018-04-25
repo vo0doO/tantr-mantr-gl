@@ -88,8 +88,8 @@ button.addEventListener("click", function() {
     let name = input.value
     //  если длина мантры больше 3 символов
     if (mant.lenght > 2) {
-      // и если в мантре появилась точка
-      } else if (~mant.indexOf(".")) {
+      // если в мантре есть точка
+      if (~mant.indexOf(".")) {
         // скрываем интерфейс ввода
           $("#def").toggle();
         // составляем финальный текст
@@ -98,15 +98,16 @@ button.addEventListener("click", function() {
           $("#pay").append(finalText);
           // показываем интерфейс оплаты
           $("#complet").css({"display": "flex"});
-            // иначе 
-        } else {
+           // иначе 
+       } else {
           // при нажатии кнопки создать используем функцию выбора буквы из оптионс
           let n = strForAdd();
           // показываем выбранну букву в интерфейсе
           defaultText.innerText = n;
           //  добавляем выбранную букву в мантр
           mant = mant + n
+        
         }
-  };
-});
+       
+  }}})
 
