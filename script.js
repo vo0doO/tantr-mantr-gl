@@ -86,8 +86,14 @@ button.addEventListener("click", function() {
   } else {
     // если введено записываем ввод в переменную
     let name = input.value
+    }
     //  если длина мантры больше 3 символов
-    if (mant.lenght > 2) {
+    if (mant.lenght < 35) {
+          let n = strForAdd();
+          // показываем выбранну букву в интерфейсе
+          defaultText.innerText = n;
+          //  добавляем выбранную букву в мантр
+          mant = mant + n
       // и если в мантре появилась точка
       } else if (~mant.indexOf(".")) {
         // скрываем интерфейс ввода
@@ -107,6 +113,6 @@ button.addEventListener("click", function() {
           //  добавляем выбранную букву в мантр
           mant = mant + n
         }
-  };
+  
 });
 
