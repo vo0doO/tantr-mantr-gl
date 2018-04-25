@@ -65,11 +65,15 @@ $("#user-in-mail").click(function () {
 })
 */   
 function getIndex(min, max){
-  return Math.floor(Math.random() * (max - min) + min);
+  let index = Math.floor(Math.random() * (max - min) + min);
+  return index
   };
 
 function strForAdd () {
-  var char = options[getIndex(0, options.length)]
+  let index = getIndex(0, options.length)
+  var char = options[index]
+  options.splice(index, 1)
+  console.log(options)
   return char
   }
 
