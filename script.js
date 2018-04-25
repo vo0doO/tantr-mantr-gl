@@ -45,7 +45,7 @@ var options = [
 ];
 
 // слушатель и инициатор события кнопки логина
-$("#user-in-mail").click(function () {
+$("#sign-in-button").click(function () {
     $("#splash").css({"display": "none",});
     $("#def").css({"display": "flex",});
   })
