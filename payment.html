@@ -1,0 +1,217 @@
+<iframe style="height:820px;" width="968" height="820" frameborder="0" marginheight="0" marginwidth="0" class="payment-frame" src="https://rt-iframe.dengisend.ru">
+<html><head>
+
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="../resources/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/style.css?v=5">
+
+<link href="img/mobile/icon.png?v=4" rel="apple-touch-icon">
+<link href="img/mobile/icon.png?v=4" rel="apple-touch-icon" sizes="76x76">
+<link href="img/mobile/icon.png?v=4" rel="apple-touch-icon" sizes="120x120">
+<link href="img/mobile/icon.png?v=4" rel="apple-touch-icon" sizes="152x152">
+<link href="img/mobile/icon.png?v=4" rel="apple-touch-icon" sizes="180x180">
+
+<link href="img/mobile/icon.png?v=4" rel="icon" sizes="192x192">
+<link href="img/mobile/icon.png?v=4" rel="icon" sizes="128x128">
+
+<link rel="shortcut icon" href="img/favicon.ico?v=4" type="image/x-icon">	<title>Перевод с карты на карту</title>
+
+</head>
+<body marginwidth="0" marginheight="0">
+<!-- Google Tag Manager -->
+<noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=!!!!!!!GTM-MB3TB8!!!!!!!!!!!!!!!!!"
+				  height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+<script type="text/javascript" async="" defer="" src="!!!!!!!!!!!!//piwik-pilot.rt.ru/piwik.js!!!!!!!!!!!!!!!!!!!!!!!!!"></script><script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=!!!!!!GTM-MB3TB8!!!!!!!!!!"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','!!!!!!!GTM-MB3TB8!!!!!!!!!!!!!!!');</script>
+<!-- End Google Tag Manager -->
+
+	<div class="wrapper">
+		<div class="container-fluid">
+			<form class="taction form" action="/transfer" method="post" autocomplete="off">
+				<div class="taction-row-top">
+					<!--[if lte IE 8]>
+					<div class="ie8-msg">
+						<p>Ваш браузер не поддерживается</p>
+						<p>Рекомендуем загрузить один из браузеров последних версий:
+							<a target="_blank" href="https://www.google.ru/chrome/browser/desktop/">Google Chrome</a>,
+							<a target="_blank" href="https://www.mozilla.org/ru/firefox/new/">Mozilla Firefox</a>,
+							<a target="_blank" href="http://www.opera.com/ru">Opera</a>
+						</p>
+					</div>
+					<![endif]-->
+					<div class="col-sm-12 taction-card taction-card-1 card" id="card1">
+						<div class="taction-card-header">
+							<label for="cc-number1">Номер карты отправителя</label>
+							<div class="bank taction-bank"></div>
+						</div>
+						<div class="taction-card-number">
+							<input id="cc-number1" class="cc-number taction-card-number-input taction-card-number-1" type="tel" name="fromCardNumber" placeholder="0000 0000 0000 0000">
+							<div class="taction-cc-error-msg">
+								<p>Неверный номер кредитной карты</p>
+							</div>
+							<div class="taction-card-logo" id="logo1"></div>
+						</div>
+						<div class="taction-card-options">
+							<div class="taction-card-options-1">
+								<label for="valid-thru">VALID THRU</label>
+								<input id="valid-thru" class="cc-exp taction-card-options-input" type="tel" name="cardDate" placeholder="04/19" maxlength="7">
+								<p class="label-small">Срок действия карты</p>
+							</div>
+							<div class="taction-card-options-2">
+								<label for="cvc2-cw2">CVC2/CVV2</label>
+								<input id="cvc2-cw2" class="cc-cvc taction-card-options-input" type="password" pattern="[0-9]*" name="cvv" placeholder="123" maxlength="3" inputmode="numeric">
+								<p class="label-small">Последние 3 цифры на полосе подписи</p>
+							</div>
+							<div class="taction-help" id="help"></div>
+							<div id="tooltip" class="tooltip">
+								<div class="text">Последние 3 цифры на обратной стороне карты</div>
+								<img src="../../resources/img/hint.png" alt="-">
+							</div>
+						</div>
+					</div>
+					<div class="taction-arrow"></div>
+					<div class="col-sm-12 taction-card card" id="card2">
+						<div class="taction-card-header">
+							<label for="cc-number2">Номер карты получателя</label>
+							<div class="taction-bank"></div>
+						</div>
+						<div class="taction-card-number">
+							<input type="tel" id="cc-number2" class="cc-number taction-card-number-input taction-card-number-2" name="receiver" placeholder="0000 0000 0000 0000">
+							<input type="hidden" name="toCardNumber" id="toCardNumber">
+							<div class="taction-cc-error-msg">
+								<p>Неверный номер кредитной карты</p>
+							</div>
+							<div class="taction-card-logo" id="logo2"></div>
+						</div>
+					</div>					
+				</div>				
+				<div class="row taction-row-bot">
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div class="taction-sum">
+							<label class="taction-sum-label" for="money">Сумма перевода:</label>
+							<input id="money" maxlength="5" name="amount" class="data-numeric taction-sum-input" type="tel" placeholder="0"> <!--<img class="taction-ruble" src="img/ruble.png" alt="">-->
+						</div>
+						<p class="bottom-right-p taction-row-bottom-right-p">
+							<span class="taction-row-span-wrapper">
+								<span class="taction-row-bottom-span">Комиссия за перевод:</span>
+								<span class="taction-row-bottom-numbers taction-row-bottom-numbers-comission" id="rate">0</span>
+							</span>
+						</p>
+						<p class="bottom-right-p taction-row-bottom-right-p">
+							<span class="taction-row-span-wrapper">
+								<span class="taction-row-bottom-span">Итого с комиссией:</span>
+								<span class="taction-row-bottom-numbers taction-row-bottom-numbers-final" id="totalAmount">0</span>
+							</span>
+						</p>
+
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 bottom-right taction-row-bottom-right">
+						<div>
+							<div class="oferta taction-oferta">
+								<input class="oferta-input taction-oferta-input" id="accept_rules" type="checkbox"><label for="accept_rules">Я принимаю
+								условия использования</label> <a href="offer_dengisend.pdf" target="_blank">сервиса</a> и <a id="get-offer" class="link">публичные оферты</a> банков-эквайеров
+							</div>
+						</div>
+						<div class="text-center">
+							<a href="#" id="button" class="taction-submit">
+								<span id="button-text">Перевести</span>
+								<img id="button-loading" class="taction-submit-loading" src="../../resources/img/loading.gif" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+				<input type="hidden" id="limitMin" value="50">
+				<input type="hidden" id="limitMax" value="75000">
+				<input type="hidden" id="rateValue" value="1.5">
+				<input type="hidden" id="rateMin" value="35">
+				<input type="hidden" name="_csrf" value="f76630e3-641f-4547-935f-3161ff4d1d9c">
+			</form>
+			<div class="row taction-row-submit">
+				<div class="clearfix">
+					<div class="col-md-6 col-sm-6">
+						<p>Комиссия за перевод: 1,5% от суммы перевода, но не меньше 35 руб.<br>
+							Срок зачисления: от нескольких минут до 5 дней.</p>
+						<p>Переводы с Вашей карты могут быть не разрешены банком, выпустившим карту, в целях безопасности или по иным причинам. Если Вам не удалось осуществить перевод, обратитесь, пожалуйста, в <a href="support">службу поддержки.</a></p>
+						<p>Банк, с карты которого Вы делаете перевод, может взять дополнительную комиссию. Её размер можно уточнить в банке. Если Вы переводите деньги с кредитной карты, банк возьмёт дополнительную комиссию как при снятии наличных в банкомате.</p>
+					</div>
+
+					<div class="col-md-6 col-sm-6">
+						<p>Карта отправителя должна поддерживать технологию 3-D Secure – подтверждение платежей в Интернете паролями, которые банк обычно присылает с помощью SMS.</p>
+						<p>Не осуществляются переводы с использованием предоплаченных (анонимных) или корпоративных карт и карт, выпущенных банками за пределами РФ.</p>
+						<p>
+							Максимальная сумма перевода: 75 000 руб.<br>
+							Минимальная сумма перевода: 50 руб.<br>
+							Максимальная сумма переводов по одной карте за сутки: 150 000 руб.<br>
+							Максимальная сумма переводов по одной карте в месяц: 600 000 руб.
+						</p>
+
+					</div>
+				</div>
+
+				<div class="col-md-12">
+					<p class="text-small-black">Услуга «Денежные переводы» - услуга по передаче финансовых распоряжений уполномоченному банку-эквайеру в целях совершения перевода (далее - Услуга) предоставляется ООО «ЭсБиСи Технологии», зарегистрированным по адресу: 123098, г. Москва, ул. Маршала Новикова, д. 1, офис 1307. Подробные условия о предоставлении Услуги: <a href="https://rt-iframe.dengisend.ru/offer_dengisend.pdf">https://rt-iframe.dengisend.ru/offer_dengisend.pdf</a>. ПАО «Ростелеком» не несет ответственности за предоставление Услуги.</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<div class="ie-popup-wrapper">
+		<div class="ie-popup">
+			<p>Ваш браузер не поддерживается</p>
+			<p>Рекомендуем загрузить один из браузеров последних версий</p>
+			<ul class="ie-popup-browsers">
+				<li><a target="_blank" href="https://www.google.ru/chrome/browser/desktop/"><img src="../../resources/img/chrome.png" alt="Chrome"> Google Chrome</a></li>
+				<li><a target="_blank" href="https://www.mozilla.org/ru/firefox/new/"><img src="../../resources/img/firefox.png" alt="Firefox"> Mozilla Firefox</a></li>
+				<li><a target="_blank" href="http://www.opera.com/ru"><img src="../../resources/img/opera.png" alt="Opera"> Opera</a></li>
+			</ul>
+			<button class="ie-popup-close">Закрыть</button>
+		</div>
+	</div>
+
+<div class="offer-iframe-wrapper-bg" id="offer-iframe-wrapper-bg">
+    <div id="offer-iframe-wrapper" class="offer-iframe-wrapper">
+        <div id="offer-iframe-close" class="offer-iframe-close">×</div>
+        <iframe src="https://offer.dengisend.ru/offer-bank/rt/index.html" frameborder="0"></iframe>
+    </div>
+</div>
+
+
+
+<script src="../resources/js/jquery-2.2.4.min.js"></script>
+<script src="../resources/js/jquery.payment.js"></script>
+<script src="../resources/js/jquery.maskedinput.min.js"></script>
+<script src="../resources/js/fail.js"></script>
+<script src="../resources/js/iphone_detect.js"></script>
+<script src="../resources/js/android_detect.js"></script>
+<script src="../resources/js/tooltip.js"></script>
+<script src="../resources/js/get_offer.js"></script>
+<script src="../resources/js/success.js"></script>
+<!--[if IE 9 ]> <script src="js/ie.js"></script> < ![endif]-->	<script src="js/validate.js"></script>
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', '', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+
+
+
+<script type="text/javascript" id="">(function(d,b,a){(b[a]=b[a]||[]).push(function(){try{b.yaCounter36571795=new Ya.Metrika({id:36571795,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0,ecommerce:"dataLayer"})}catch(a){}});var e=d.getElementsByTagName("script")[0],c=d.createElement("script");a=function(){e.parentNode.insertBefore(c,e)};c.type="text/javascript";c.async=!0;c.src="https://mc.yandex.ru/metrika/watch.js";"[object Opera]"==b.opera?d.addEventListener("DOMContentLoaded",a,!1):a()})(document,window,"yandex_metrika_callbacks");</script>
+<noscript>&lt;div&gt;&lt;img src="https://mc.yandex.ru/watch/!!!!!36571795!!!!!!!!s" style="position:absolute; left:-9999px;" alt=""&gt;&lt;/div&gt;</noscript>
+
+<script type="text/javascript" id="">var _paq=_paq||[];_paq.push(["setCookieDomain","*.rt.ru"]);_paq.push(["trackPageView"]);_paq.push(["enableLinkTracking"]);(function(){var c="!!!!!//piwik-pilot.rt.ru/!!!!!!";_paq.push(["setTrackerUrl",c+"piwik.php"]);_paq.push(["setSiteId",2]);var a=document,b=a.createElement("script"),a=a.getElementsByTagName("script")[0];b.type="text/javascript";b.async=!0;b.defer=!0;b.src=c+"piwik.js";a.parentNode.insertBefore(b,a)})();</script>
+<noscript>&lt;p&gt;&lt;img src="!!!!//piwik-pilot.rt.ru/piwik.php?idsite=2!!!!!!" style="border:0;" alt=""&gt;&lt;/p&gt;</noscript>
+  </body></html>

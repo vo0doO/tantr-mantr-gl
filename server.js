@@ -25,7 +25,9 @@ app.get("/edit", function(req, res) {
 app.get("/concept", function(req, res) {
   res.sendFile("/app/concept.html")
 })
-
+app.get("/payment", function(req, res) {
+  res.sendFile("/app/payment.html")
+})
 const listener = app.listen(process.env.PORT, function () {
   console.log("ТВОЕ ПРИЛОЖЕНИЕ РАЗВЕРНУТО НА ПОРТУ " + process.env.PORT)
 })
