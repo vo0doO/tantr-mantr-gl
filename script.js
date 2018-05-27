@@ -1,4 +1,3 @@
-
 var defaultText = document.getElementById("eight");
 var answer = document.getElementById("answer");
 var button = document.getElementById("button");
