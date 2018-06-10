@@ -178,7 +178,10 @@ var paymentForm = new SqPaymentForm({
      * Triggered when: SqPaymentForm is fully loaded
      */
     paymentFormLoaded: function() {
-      /* HANDLE AS DESIRED */
+      /* HANDLE AS DESIRED 
+        РУЧКА КАК ЖЕЛАЕТСЯ
+
+      */
     }
   }
 });
