@@ -1,5 +1,5 @@
 // Set the application ID
-var applicationId = "sq0idp-rfr4c1LFWS6iy0Qn08gY0g";
+var applicationId = pro;
 
 // Set the location ID
 var locationId = "CTEGB4GD5WCBA";
@@ -114,7 +114,7 @@ var paymentForm = new SqPaymentForm({
 
     /*
      * callback function: cardNonceResponseReceived
-     * Triggered when: SqPaymentForm completes a card nonce request
+     * Запускается, когда: SqPaymentForm завершает запрос на отмену карты
      */
     cardNonceResponseReceived: function(errors, nonce, cardData, billingContact, shippingContact) {
       if (errors) {
