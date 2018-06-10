@@ -67,16 +67,59 @@
         
         
     <!-- Страница оплаты -->
-    <div id="pay">
-      <p>Поздравляем !</p>
-      <p>Ваша мантра готова !</p>
-      <p>Для того что бы она работала, пожалуйста произведите оплату.</p>
-      <div><div id="completPay">
-        <iframe src="https://money.yandex.ru/quickpay/button-widget?targets=%D0%98%D0%BD%D0%B4%D0%B8%D0%B2%D0%B8%D0%B4%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D0%BC%D0%B0%D0%BD%D1%82%D1%80%D0%B0&default-sum=100&button-text=11&yamoney-payment-type=on&button-size=l&button-color=black&fio=on&phone=on&mail=on&successURL=https%3A%2F%2Ftransvist-mantr.glitch.me%2Fcompletepay&quickpay=small&account=410013609598901&" width="227" height="48" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
-         </div>
-      </div>
-      </div>
-    </div>
+    <div id="sq-ccbox">
+  <!--
+    Вы должны заменить атрибут действия формы на путь     
+    URL-адрес, по которому вы хотите POST-нонс (например, «/ process-card»)
+  -->
+  <form id="nonce-form" novalidate action="path/to/payment/processing/page" method="post">
+    Pay with a Credit Card
+    <table>
+    <tbody>
+      <tr>
+        <td>Card Number:</td>
+        <td><div id="sq-card-number"></div></td>
+      </tr>
+      <tr>
+        <td>CVV:</td>
+        <td><div id="sq-cvv"></div></td>
+      </tr>
+      <tr>
+        <td>Expiration Date: </td>
+        <td><div id="sq-expiration-date"></div></td>
+      </tr>
+      <tr>
+        <td>Postal Code:</td>
+        <td><div id="sq-postal-code"></div></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button id="sq-creditcard" class="button-credit-card" onclick="requestCardNonce(event)">
+            Pay with card
+          </button>
+        </td>
+      </tr>
+    </tbody>
+    </table>
+
+    <!--
+      After a nonce is generated it will be assigned to this hidden input field.
+    -->
+    <input type="hidden" id="card-nonce" name="nonce">
+  </form>
+</div>
+
+<div id="sq-walletbox">
+  Pay with a Digital Wallet
+  <div id="sq-apple-pay-label" class="wallet-not-enabled">Apple Pay for Web not enabled</div>
+  <!-- Placeholder for Apple Pay for Web button -->
+  <button id="sq-apple-pay" class="button-apple-pay"></button>
+
+  <div id="sq-masterpass-label" class="wallet-not-enabled">Masterpass not enabled</div>
+  <!-- Placeholder for Masterpass button -->
+  <button id="sq-masterpass" class="button-masterpass"></button>
+</div>
+
 
    
     
