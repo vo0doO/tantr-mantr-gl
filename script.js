@@ -107,9 +107,9 @@ button.addEventListener("click", function() {
           // составляем финальный текст
           var finalText= "<p>"+name +", ваша мантра: "+ "\"" + mant+"\""+"</p>" + "<p>Запишите её перед тем как продолжите...</p>"
           // добовляем финальный текст в html
-          // $("#sq=ccbox").append(finalText);
+          $("#pay").append(finalText);
           // показываем интерфейс оплаты
-          $("#sq-ccbox").css({"display": "flex"});
+          $("#pay").css({"display": "flex"});
     // иначе(переменная comma равна "ложь" и длина мантры больше 3 символов) 
     } else {
           // переменная n равна слуайной букве из массива
