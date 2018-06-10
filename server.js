@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 
 
-
 // Ссылаемся на статические файлы
 app.use(express.static('./'));
 
@@ -26,8 +25,10 @@ app.get("/concept", function(req, res) {
   res.sendFile("/app/concept.html")
 })
 
-app.get("/card", function(req, res) {
-  res.sendFile("/app/card.html")
+app.get("/process-card", function(req, res) {
+  console.log(req.data)
+  console.log(res.data)
+  res.sendFile("/app/concept.html")
 })
 
 // Разворачиваем приложение(определяем порт)

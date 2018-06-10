@@ -1,8 +1,8 @@
 // Set the application ID
-var applicationId = "sandbox-sq0idp-rfr4c1LFWS6iy0Qn08gY0g";
+var applicationId = "sq0idp-rfr4c1LFWS6iy0Qn08gY0g";
 
 // Set the location ID
-var locationId = "CBASEFHnYt4LtUBRMdcEfBL_IdcgAQ";
+var locationId = "CTEGB4GD5WCBA";
 
 /*
  * function: requestCardNonce
@@ -92,11 +92,11 @@ var paymentForm = new SqPaymentForm({
     /*
      * callback function: createPaymentRequest
 * Запускается, когда: нажата кнопка оплаты цифрового кошелька.
-     
-    *createPaymentRequest: function () {
+     */
+    createPaymentRequest: function () {
 
       var paymentRequestJson ;
-      /* ADD CODE TO SET / CREATE paymentRequestJson 
+      /* ADD CODE TO SET / CREATE paymentRequestJson */
       return paymentRequestJson ;
     },
 
@@ -104,17 +104,17 @@ var paymentForm = new SqPaymentForm({
      * callback function: validateShippingContact
      * Triggered when: a shipping address is selected/changed in a digital
      *                 wallet UI that supports address selection.
-    
+     */
     validateShippingContact: function (contact) {
 
       var validationErrorObj ;
-      /* ADD CODE TO SET validationErrorObj IF ERRORS ARE FOUND 
+      /* ADD CODE TO SET validationErrorObj IF ERRORS ARE FOUND */
       return validationErrorObj ;
     },
-  
+
     /*
      * callback function: cardNonceResponseReceived
-     * Запускается, когда: SqPaymentForm завершает запрос на отмену карты
+     * Triggered when: SqPaymentForm completes a card nonce request
      */
     cardNonceResponseReceived: function(errors, nonce, cardData, billingContact, shippingContact) {
       if (errors) {
@@ -127,7 +127,7 @@ var paymentForm = new SqPaymentForm({
         return;
       }
 
-      alert('Nonce received: ' + nonce); /* FOR TESTING ONLY */
+      // alert('Nonce received: ' + nonce); /* FOR TESTING ONLY */
 
       // Назначьте значение nonce в поле скрытой формы
 
