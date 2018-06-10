@@ -1,8 +1,8 @@
 // Set the application ID
-var applicationId = "sandbox-sq0idp-rfr4c1LFWS6iy0Qn08gY0g";
+var applicationId = "sq0idp-rfr4c1LFWS6iy0Qn08gY0g";
 
 // Set the location ID
-var locationId = "CBASEBKdAlVON51XtHqnXMBUc-0gAQ";
+var locationId = "CTEGB4GD5WCBA";
 
 /*
  * function: requestCardNonce
@@ -34,7 +34,6 @@ var paymentForm = new SqPaymentForm({
   inputStyles: [{
       fontSize: '.9em'
   }],
-  /*
   // Initialize Apple Pay placeholder ID
   applePay: {
     elementId: 'sq-apple-pay'
@@ -44,7 +43,7 @@ var paymentForm = new SqPaymentForm({
   masterpass: {
     elementId: 'sq-masterpass'
   },
-*/
+
   // Initialize the credit card placeholders
   cardNumber: {
     elementId: 'sq-card-number',
@@ -66,8 +65,8 @@ var paymentForm = new SqPaymentForm({
   callbacks: {
 
     /*
-     * callback function: methodsSupported
-     * Triggered when: the page is loaded.
+     * функция обратного вызова: методыПоддерживаемые      
+     * Триггер, когда: страница загружена.
      */
     methodsSupported: function (methods) {
 
@@ -92,12 +91,12 @@ var paymentForm = new SqPaymentForm({
 
     /*
      * callback function: createPaymentRequest
-     * Triggered when: a digital wallet payment button is clicked.
+* Запускается, когда: нажата кнопка оплаты цифрового кошелька.
      */
     createPaymentRequest: function () {
 
       var paymentRequestJson ;
-      /* ADD CODE TO SET/CREATE paymentRequestJson */
+      /* ADD CODE TO SET / CREATE paymentRequestJson */
       return paymentRequestJson ;
     },
 
@@ -128,12 +127,13 @@ var paymentForm = new SqPaymentForm({
         return;
       }
 
-      alert('Nonce received: ' + nonce); /* FOR TESTING ONLY */
+      // alert('Nonce received: ' + nonce); /* FOR TESTING ONLY */
 
-      // Assign the nonce value to the hidden form field
+      // Назначьте значение nonce в поле скрытой формы
+
       document.getElementById('card-nonce').value = nonce;
 
-      // POST the nonce form to the payment processing page
+      // ОТПРАВИТЬ форму nonce на страницу обработки платежей
       document.getElementById('nonce-form').submit();
 
     },
