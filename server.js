@@ -28,6 +28,7 @@ app.get("/concept", function(req, res) {
 app.get("/process-card", function(req, res) {
   console.log(req.data)
   console.log(res.data)
+  res.sendFile("/app/concept.html")
 })
 
 // Разворачиваем приложение(определяем порт)
