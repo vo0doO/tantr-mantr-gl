@@ -26,6 +26,9 @@ app.get("/concept", function(req, res) {
   res.sendFile("/app/concept.html")
 })
 
+app.get("/card", function(req, res) {
+  res.sendFile("/app/card.html")
+})
 
 // Разворачиваем приложение(определяем порт)
 const listener = app.listen(process.env.PORT, function () {
