@@ -25,16 +25,16 @@ function requestCardNonce(event) {
 // Создание и инициализация объекта формы платежа
 var paymentForm = new SqPaymentForm({
 
-  // Initialize the payment form elements
+  // Инициализировать элементы платежной формы
   applicationId: applicationId,
   locationId: locationId,
   inputClass: 'sq-input',
 
-  // Customize the CSS for SqPaymentForm iframe elements
+// Настроить CSS для элементов iframe SqPaymentForm
   inputStyles: [{
       fontSize: '.9em'
   }],
-
+  /*
   // Initialize Apple Pay placeholder ID
   applePay: {
     elementId: 'sq-apple-pay'
@@ -44,7 +44,7 @@ var paymentForm = new SqPaymentForm({
   masterpass: {
     elementId: 'sq-masterpass'
   },
-
+*/
   // Initialize the credit card placeholders
   cardNumber: {
     elementId: 'sq-card-number',
