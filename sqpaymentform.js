@@ -13,7 +13,7 @@ var locationId = "CBASEFHnYt4LtUBRMdcEfBL_IdcgAQ";
  * Изменение этой функции не требуется, но может быть настроено, если вы  
  * хотите предпринять дополнительные действия при нажатии кнопки формы.
  */
-function requestCardNonce(window) {
+function requestCardNonce(event) {
 
   // Не отправляйте форму до тех пор, пока SqPaymentForm не вернется с nonce
   event.preventDefault();
@@ -58,7 +58,7 @@ var paymentForm = new SqPaymentForm({
     placeholder: 'MM/YY'
   },
   postalCode: {
-    elementId: false
+    elementId: 'sq-postal-code'
   },
 
   // SqPaymentForm callback functions
@@ -127,7 +127,7 @@ var paymentForm = new SqPaymentForm({
         return;
       }
 
-      // alert('Nonce received: ' + nonce); /* FOR TESTING ONLY */
+      alert('Nonce received: ' + nonce); /* FOR TESTING ONLY */
 
       // Назначьте значение nonce в поле скрытой формы
 
@@ -182,7 +182,6 @@ var paymentForm = new SqPaymentForm({
         РУЧКА КАК ЖЕЛАЕТСЯ
 
       */
-      paymentForm.build ();
     }
   }
 });
