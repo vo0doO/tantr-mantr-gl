@@ -3,18 +3,11 @@ const app = express();
 
 app.use(express.static('./'));
 
-
+// Возвращаем 
 app.get("/", function(req, res) {
   res.sendFile("index.html");
 })
 
-app.get("/mail", function(req, res) {
-  res.sendFile("/app/mail.html")
-})
-
-app.get("/reciever.html", function(req, res) {
-  res.sendFile("/app/reciever.html")
-})
 app.get("/readme", function(req, res) {
   res.sendFile("/app/README.md")
 })
