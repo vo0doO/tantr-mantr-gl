@@ -57,62 +57,17 @@
         <button id="button" #disable>
           Создать
         </button>
-        </div>
+      </div>
+        
         
         
     <!-- Страница оплаты -->
-    <div id="sq-ccbox">
-  <!--
-    Вы должны заменить атрибут действия формы на путь     
-    URL-адрес, по которому вы хотите POST-нонс (например, «/ process-card»)
-  -->
-  <form id="nonce-form" novalidate action="/process-card" method="post">
-    Pay with a Credit Card
-    <table>
-    <tbody>
-      <tr>
-        <td>Card Number:</td>
-        <td><div id="sq-card-number"></div></td>
-      </tr>
-      <tr>
-        <td>CVV:</td>
-        <td><div id="sq-cvv"></div></td>
-      </tr>
-      <tr>
-        <td>Expiration Date: </td>
-        <td><div id="sq-expiration-date"></div></td>
-      </tr>
-      <tr>
-        <td>Postal Code:</td>
-        <td><div id="sq-postal-code"></div></td>
-      </tr>
-      <tr>
-        <td colspan="2">
-          <button id="sq-creditcard" class="button-credit-card" onclick="requestCardNonce(event)">
-            Pay with card
-          </button>
-        </td>
-      </tr>
-    </tbody>
-    </table>
+    <div>
+      <!DOCTYPE html>
+            <iframe class='iframe' src="https://money.yandex.ru/fastpay/form/d9309398f8e94020be3cf2d5cc2a56fd" width='500' height='382' style='border: 1px solid #e8e8e8;'></iframe>
+      </D
+    </div>
 
-    <!--
-      After a nonce is generated it will be assigned to this hidden input field.
-    -->
-    <input type="hidden" id="card-nonce" name="nonce">
-  </form>
-</div>
-
-<div id="sq-walletbox">
-  Pay with a Digital Wallet
-  <div id="sq-apple-pay-label" class="wallet-not-enabled">Apple Pay for Web not enabled</div>
-  <!-- Placeholder for Apple Pay for Web button -->
-  <button id="sq-apple-pay" class="button-apple-pay"></button>
-
-  <div id="sq-masterpass-label" class="wallet-not-enabled">Masterpass not enabled</div>
-  <!-- Placeholder for Masterpass button -->
-  <button id="sq-masterpass" class="button-masterpass"></button>
-</div>
 
 
    
