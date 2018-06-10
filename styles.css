@@ -114,9 +114,6 @@ div#splash {
 }
 
 div#pay {
-  display: none;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background-color: #0288D1;
