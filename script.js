@@ -103,9 +103,12 @@ button.addEventListener("click", function() {
     // иначе если переменная comma равна "правда" 
     } else if (comma) {
           // скрываем интерфейс вводаd
-      
           $("#def").toggle();
           // составляем финальный текст
+          var mantra = mant;
+          
+          console.log(mantra)
+          $().send()
           var finalText= "<p>"+name +", ваша мантра: "+ "\"" + mant+"\""+"</p>" + "<p>Запишите её перед тем как продолжите...</p>"
           // добовляем финальный текст в html
           $("#pay").append(finalText);
