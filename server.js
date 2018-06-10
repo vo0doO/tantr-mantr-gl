@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 
-const pay = require("/sqpaymentform.js")
 
 
 // Ссылаемся на статические файлы
