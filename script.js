@@ -105,15 +105,10 @@ button.addEventListener("click", function() {
     } else if (comma) {
           // скрываем интерфейс вводаd
           $("#def").toggle();
-          // отправляем данные на сервер
-          var http = new XMLHttpRequest();
-            var url = "/process-card";
-            var params = mant
-            http.send(params)
           // составляем финальный текст
           var finalText= "<p>"+name +", ваша мантра: "+ "\"" + mant+"\""+"</p>" + "<p>Запишите её перед тем как продолжите...</p>"
           // добовляем финальный текст в html
-          $("#pay").append(finalText);
+          // $("#pay").append(finalText);
           // показываем интерфейс оплаты
           $("#pay").css({"display": "flex"});
     // иначе(переменная comma равна "ложь" и длина мантры больше 3 символов) 

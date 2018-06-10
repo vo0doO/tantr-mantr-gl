@@ -16,8 +16,8 @@ app.get("/readme", function(req, res) {
   res.sendFile("/app/README.md")
 })
 
-app.get("/process-card", function(req, res) {
-  con
+app.get("/card", function(req, res) {
+  console.log(req)
 })
 // Возвращаем edit.html
 app.get("/edit", function(req, res) {
