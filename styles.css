@@ -114,6 +114,7 @@ div#splash {
 }
 
 div#pay {
+  display: none;
     top: 0;
     left: 0;
     width: 100%;
@@ -121,7 +122,6 @@ div#pay {
     background-color: #0288D1;
     background: radial-gradient(circle, #039BE5, #01579b);
     z-index: 10000;
-    display: flex;
     justify-content: center;
     align-items: center;
     color: white;
