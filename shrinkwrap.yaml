@@ -6,12 +6,13 @@ dependencies:
   mailru-api: 0.2.0
   middleware-io: 0.0.6
   node-fetch: 2.1.2
-  npm: 6.0.0
+  npm: 6.1.0
   sandwich-stream: 1.0.0
+  square-connect: 2.8.0
   start: 5.1.0
-  tough-cookie: 2.3.4
+  tough-cookie: 2.4.2
   vk-io: 3.2.0
-  ws: 5.1.1
+  ws: 5.2.0
 packages:
   /@types/node/9.6.6:
     dev: false
@@ -214,6 +215,10 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha1-cj599ugBrFYTETp+RFqbactjKBg=
+  /component-emitter/1.2.1:
+    dev: false
+    resolution:
+      integrity: sha1-E3kY1teCg/ffemt8WmPhQOaUJeY=
   /content-disposition/0.5.2:
     dev: false
     engines:
@@ -240,6 +245,10 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-5+Ch+e9DtMi6klxcWpboBtFoc7s=
+  /cookiejar/2.1.2:
+    dev: false
+    resolution:
+      integrity: sha512-Mw+adcfzPxcPeI+0WlvRrr/3lGVO0bD75SxX6811cxSh1Wbxx7xZBGK1eVtDf6si8rg2lhnUjsVLMFMfbRIuwA==
   /core-util-is/1.0.2:
     dev: false
     resolution:
@@ -496,6 +505,10 @@ packages:
       node: '>= 0.12'
     resolution:
       integrity: sha1-SXBJi+YEwgwAXU9cI67NIda0kJk=
+  /formidable/1.2.1:
+    dev: false
+    resolution:
+      integrity: sha512-Fs9VRguL0gqGHkXS5GQiMCr1VhZBxz0JnJs4JmMp/2jL18Fmbzvv7vOFRU+U8TBkHEE/CX1qDXzJplVULgsLeg==
   /forwarded/0.1.2:
     dev: false
     engines:
@@ -791,6 +804,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-KI1+qOZu5DcW6wayYHSzR/tXKCDC5Om4s1z2QJjDULzLcmf3DvzS7oluY4HCTrc+9FiKmWUgeNLg7W3uIQvxtQ==
+  /mime/1.6.0:
+    dev: false
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==
   /ms/2.0.0:
     dev: false
     resolution:
@@ -812,7 +831,7 @@ packages:
     dev: false
     resolution:
       integrity: sha1-sEDrCSOWivq/jTL7HxfxFn/auQc=
-  /npm/6.0.0:
+  /npm/6.1.0:
     bundledDependencies:
       - abbrev
       - ansi-regex
@@ -932,9 +951,10 @@ packages:
       - tiny-relative-date
       - cli-columns
       - node-gyp
+      - lock-verify
     dev: false
     resolution:
-      integrity: sha512-EtM7gNAgMdQeUh8SW2bsaogywVS37lPhf2GYAf2vxR1pktxxT02CW8BHrx59MSbG3ZrRBbcOhpe03gts+eAbdA==
+      integrity: sha512-e38cCtJ0lEjLXXpc4twEfj8Xw5hDLolc2Py87ueWnUhJfZ8GA/5RVIeD+XbSr1+aVRGsRsdtLdzUNO63PvQJ1w==
   /nth-check/1.0.1:
     dependencies:
       boolbase: 1.0.0
@@ -990,6 +1010,10 @@ packages:
       node: '>= 0.10'
     resolution:
       integrity: sha512-jQTChiCJteusULxjBp8+jftSQE5Obdl3k4cnmLA6WXtK6XFuWRnvVL7aCiBqaLPM8c4ph0S4tKna8XvmIwEnXQ==
+  /psl/1.1.27:
+    dev: false
+    resolution:
+      integrity: sha512-J8tJX5tAeEp9tQTI2w2aMZ6V1INuU4JmNaNPRuHAqjjVq3ZJ+jV3+tcT3ncgTnBxvwJy740IB/WZrxFus2VdMA==
   /punycode/1.4.1:
     dev: false
     resolution:
@@ -1004,6 +1028,12 @@ packages:
       node: '>=0.6'
     resolution:
       integrity: sha512-eRzhrN1WSINYCDCbrz796z37LOe3m5tmW7RQf6oBntukAG1nmovJvhnwHHRMAfeoItc1m2Hk02WER2aQ/iqs+A==
+  /qs/6.5.2:
+    dev: false
+    engines:
+      node: '>=0.6'
+    resolution:
+      integrity: sha512-N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==
   /range-parser/1.2.0:
     dev: false
     engines:
@@ -1177,6 +1207,14 @@ packages:
       node: '>=4.0.0'
     resolution:
       integrity: sha512-FL1b58BDrqS3A11lJ0zEdnJ3UOKqVxawAkF3k7F0CVN7VQ34aZrV+G8BZ1WC9ZL7NyrwsW0oviwsWDgRuVYtJg==
+  /square-connect/2.8.0:
+    dependencies:
+      superagent: 3.5.2
+    dev: false
+    engines:
+      node: '>=6.0'
+    resolution:
+      integrity: sha1-fesQFUOwRIVSXZSUdPMByfSCuNk=
   /sshpk/1.14.1:
     dependencies:
       asn1: 0.2.3
@@ -1227,6 +1265,23 @@ packages:
     dev: false
     resolution:
       integrity: sha1-TkhM1N5aC7vuGORjB3EKioFiGHg=
+  /superagent/3.5.2:
+    dependencies:
+      component-emitter: 1.2.1
+      cookiejar: 2.1.2
+      debug: 2.6.9
+      extend: 3.0.1
+      form-data: 2.3.2
+      formidable: 1.2.1
+      methods: 1.1.2
+      mime: 1.6.0
+      qs: 6.5.2
+      readable-stream: 2.3.6
+    dev: false
+    engines:
+      node: '>= 0.12'
+    resolution:
+      integrity: sha1-M2GjlxVnUEw1EGOr6q4PqiPb8/g=
   /tough-cookie/2.3.4:
     dependencies:
       punycode: 1.4.1
@@ -1235,6 +1290,15 @@ packages:
       node: '>=0.8'
     resolution:
       integrity: sha512-TZ6TTfI5NtZnuyy/Kecv+CnoROnyXn2DN97LontgQpCwsX2XyLYCC0ENhYkehSOwAp8rTQKc/NUIF7BkQ5rKLA==
+  /tough-cookie/2.4.2:
+    dependencies:
+      psl: 1.1.27
+      punycode: 1.4.1
+    dev: false
+    engines:
+      node: '>=0.8'
+    resolution:
+      integrity: sha512-vahm+X8lSV/KjXziec8x5Vp0OTC9mq8EVCOApIsRAooeuMPSO8aT7PFACYkaL0yZ/3hVqw+8DzhCJwl8H2Ad6w==
   /tunnel-agent/0.3.0:
     dev: false
     resolution:
@@ -1312,12 +1376,12 @@ packages:
       node: '>=7.0.0'
     resolution:
       integrity: sha512-cWmizGQCfzYgQ550eRqkoJSDYa8tq7Z8TbEriG6cI8q86fYliEzzsLh9psi0ZFMRaNleonQsm1wRkcboWxat0g==
-  /ws/5.1.1:
+  /ws/5.2.0:
     dependencies:
       async-limiter: 1.0.0
     dev: false
     resolution:
-      integrity: sha512-bOusvpCb09TOBLbpMKszd45WKC2KPtxiyiHanv+H2DE3Az+1db5a/L7sVJZVDPUC1Br8f0SKRr1KjLpD1U/IAw==
+      integrity: sha512-c18dMeW+PEQdDFzkhDsnBAlS4Z8KGStBQQUcQ5mf7Nf689jyGk0594L+i9RaQuf4gog6SvWLJorz2NfSaqxZ7w==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 7
 shrinkwrapVersion: 3
@@ -1329,9 +1393,10 @@ specifiers:
   mailru-api: ^0.2.0
   middleware-io: ^0.0.6
   node-fetch: ^2.1.2
-  npm: ^6.0.0
+  npm: ^6.1.0
   sandwich-stream: ^1.0.0
+  square-connect: '*'
   start: ^5.1.0
-  tough-cookie: ^2.3.4
+  tough-cookie: ^2.4.2
   vk-io: ^3.2.0
-  ws: ^5.1.1
+  ws: ^5.2.0

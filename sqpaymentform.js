@@ -13,7 +13,7 @@ var locationId = "CBASEFHnYt4LtUBRMdcEfBL_IdcgAQ";
  * Изменение этой функции не требуется, но может быть настроено, если вы  
  * хотите предпринять дополнительные действия при нажатии кнопки формы.
  */
-function requestCardNonce(event) {
+function requestCardNonce(window) {
 
   // Не отправляйте форму до тех пор, пока SqPaymentForm не вернется с nonce
   event.preventDefault();
