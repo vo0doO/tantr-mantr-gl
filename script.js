@@ -108,7 +108,7 @@ button.addEventListener("click", function() {
           // составляем финальный текст
           var finalText= "<p>"+name +", ваша мантра: "+ "\"" + mant+"\""+"</p>" + "<p>Запишите её перед тем как продолжите...</p>"
           // добовляем финальный текст в html
-          // $("#pay").append(finalText);
+          $("#pay").append(finalText);
           // показываем интерфейс оплаты
           $("#pay").css({"display": "flex"});
     // иначе(переменная comma равна "ложь" и длина мантры больше 3 символов) 
