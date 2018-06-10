@@ -58,7 +58,7 @@ var paymentForm = new SqPaymentForm({
     placeholder: 'MM/YY'
   },
   postalCode: {
-    elementId: 'sq-postal-code'
+    elementId: false
   },
 
   // SqPaymentForm callback functions
@@ -182,6 +182,7 @@ var paymentForm = new SqPaymentForm({
         РУЧКА КАК ЖЕЛАЕТСЯ
 
       */
+      paymentForm.build ();
     }
   }
 });
