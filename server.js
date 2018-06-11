@@ -11,25 +11,8 @@ app.get("/", function(req, res) {
   res.sendFile("index.html");
 })
 
-// Возвращаем Readme.md
-app.get("/readme", function(req, res) {
-  res.sendFile("/app/README.md")
-})
-
-app.("/card", function(req, res) {
-  console.log(req)
-})
-// Возвращаем edit.html
-app.get("/edit", function(req, res) {
-  res.sendFile("/app/edit.html")
-})
-
-// Возвращаем concept.html
-app.get("/concept", function(req, res) {
-  res.sendFile("/app/concept.html")
-})
 
 // Разворачиваем приложение(определяем порт)
-const listener = app.listen(process.env.PORT, function () {
-  console.log("ТВОЕ ПРИЛОЖЕНИЕ РАЗВЕРНУТО НА ПОРТУ " + process.env.PORT)
+const listener = app.listen("3000", function () {
+  console.log("ТВОЕ ПРИЛОЖЕНИЕ РАЗВЕРНУТО НА ПОРТУ " + "3000")
 })
