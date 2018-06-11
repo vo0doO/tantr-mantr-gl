@@ -16,7 +16,7 @@ app.get("/readme", function(req, res) {
   res.sendFile("/app/README.md")
 })
 
-app.get("/card", function(req, res) {
+app.post("/card", function(req, res) {
   console.log(req)
 })
 // Возвращаем edit.html
